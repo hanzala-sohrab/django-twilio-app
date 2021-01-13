@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block content %}
+    <div class="jumbotron text-center">
+      <h1>Twilio - SMS</h1>
+      <form method="post">
+          {% csrf_token %}
+          <input id="phone" name="phone" type="text" placeholder="Phone"><br>
+          <textarea id="message" name="message" placeholder="Type in your message"></textarea><br>
+          <input type="submit" value="Send SMS">
+      </form>
+    </div>
+{% endblock %}
